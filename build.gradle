@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.7-SNAPSHOT' // 1.21.4 için güncel Loom
+    id 'fabric-loom' version '1.7.4' // Daha stabil bir sürüm
     id 'maven-publish'
 }
 
@@ -9,6 +9,7 @@ group = 'com.kendiadin.client'
 repositories {
     mavenCentral()
     maven { url = "https://maven.fabricmc.net/" }
+    maven { url = "https://jitpack.io" }
 }
 
 dependencies {
@@ -26,4 +27,3 @@ java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
 }
-
