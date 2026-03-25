@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.7.4' // Daha stabil bir sürüm
+    id 'fabric-loom' version '1.9-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -8,8 +8,6 @@ group = 'com.kendiadin.client'
 
 repositories {
     mavenCentral()
-    maven { url = "https://maven.fabricmc.net/" }
-    maven { url = "https://jitpack.io" }
 }
 
 dependencies {
