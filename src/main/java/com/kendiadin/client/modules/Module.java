@@ -1,22 +1,17 @@
 package com.kendiadin.client.modules;
 
-public abstract class Module {
-    private String name;
-    private boolean enabled = false;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Module(String name) {
-        this.name = name;
+public class ModuleManager {
+    public static final List<Module> modules = new ArrayList<>();
+
+    public static void init() {
+        // Yazdığımız modülü listeye ekliyoruz
+        modules.add(new FullBright());
     }
 
-    public String getName() { return name; }
-    public boolean isEnabled() { return enabled; }
-
-    public void toggle() {
-        this.enabled = !this.enabled;
-        if (enabled) onEnable(); else onDisable();
+    public static List<Module> getModules() {
+        return modules;
     }
-
-    public abstract void onEnable();
-    public abstract void onDisable();
 }
-
